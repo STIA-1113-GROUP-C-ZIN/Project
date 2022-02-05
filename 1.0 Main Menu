@@ -1,1 +1,46 @@
+import java.util.Scanner;
 
+public class MainMenu {
+
+	public static void main(String[] args) {
+
+		char options;
+		Scanner sc = new Scanner (System.in);
+		
+		do {
+			System.out.println("Welcome to Group 1 Auto Vehicle");
+			
+			System.out.println("1-Motorcycle 2-Aircraft 3-Cars 4-Cruise 5-Train");
+			System.out.println("Please enter the service number:");
+			int service = sc.nextInt();
+			
+			if(service==1) {
+				Motorcycle a = new Motorcycle();
+				a.main(args);
+			}
+			else if(service==2) {
+				Aircraft b = new Aircraft();
+				b.main(args);
+			}
+			else if(service==3) {
+				Cars c = new Cars();
+				c.main(args);
+			}
+			else if(service==4) {
+				Cruise d = new Cruise();
+				d.main(args);
+			}
+			else if(service==4) {
+				Train e = new Train();
+				e.main(args);
+			}else {
+				System.out.println("Invalid number! Please re-enter with the correct number");
+			}
+		
+			System.out.println("");
+			System.out.println("Return to the main menu? Y=Yes N=No");
+			options=sc.next().charAt(0);
+			}while (options=='y' || options=='Y');
+	}
+
+}
