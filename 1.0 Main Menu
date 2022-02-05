@@ -30,7 +30,7 @@ public class MainMenu {
 				Cruise d = new Cruise();
 				d.main(args);
 			}
-			else if(service==4) {
+			else if(service==5) {
 				Train e = new Train();
 				e.main(args);
 			}else {
