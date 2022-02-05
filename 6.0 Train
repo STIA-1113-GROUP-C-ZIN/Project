@@ -1,1 +1,145 @@
+import java.util.Scanner;
 
+public class Train {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		printpersonaldetail();
+		printticketdetail();
+		//printreceipt();
+		
+		in.close ();
+		
+	}
+	
+	public static void printpersonaldetail() {
+		Scanner in = new Scanner(System.in);
+	
+		
+		System.out.println("*********** Welcome to the Ticket Booking System*************");
+		System.out.println();
+		System.out.println(" Do you want to continue? ");
+		System.out.println(" 1. Yes            2. No  ");
+		System.out.print(" Enter Your Choice: ");
+		int choice = in.nextInt();
+		System.out.println();
+		switch (choice) {           //This is a repetation control structure
+		case 1 :
+			System.out.println(" You can Enter The System.");
+			for ( int i=1; i<= 30; i++)
+				System.out.print("*");
+		
+			System.out.println();
+			
+			System.out.println("Please fill Up Your Personal Detail.");
+			
+			String[]personal = {"name","age","gender","destination"};
+			System.out.print(" Enter Your First Name: " );
+			personal[0] = in.next();
+			System.out.print(" Enter Your Age: "); //this is a selection control structure
+			personal[1] = in.next();
+			System.out.print(" Enter Your Gender: ");
+			personal[2] = in.next();
+			System.out.print(" Enter your destination:");
+			personal[3] = in.next();
+			
+			System.out.println();
+			
+			System.out.println(" Please Check Your Personal Detail: ");
+			for (int q= 0; q<personal.length; q++)
+				System.out.println(personal[q]);
+			
+			for (int i = 0; i<35; i++) {
+				System.out.print("*");
+			}
+			System.out.println();
+			
+		case 2:
+			System.out.println(" Thank You For Entering The System.");
+			break;
+			
+			
+		} 
+		
+			}
+			
+		public static void printticketdetail() {
+			Scanner in = new Scanner(System.in);
+			double adultticketprice = 55;
+			double childticketprice = 32;
+			double additionalVIP =100;
+			double dicounts=0.15;
+			char confirm=0;
+
+			
+			System.out.println();
+			System.out.println(" Please Fill Up Your Ticket Detail.");
+			
+			System.out.println(" You can refer here before make some choice.");
+			
+			System.out.println("****************************************");
+			System.out.println("*Ticket Price/Ticket Type/Trip         *");
+			System.out.println("****************************************");
+			System.out.println("* Adult = RM 55.00 per person          *");
+			System.out.println("* Child = RM 32.00 per person          *");
+			System.out.println("****************************************");
+			System.out.println("* Economic = normal price              *");
+			System.out.println("* VIP      = RM 100                    *");
+			System.out.println("****************************************");
+			System.out.println("* 1. One Way                           *");
+			System.out.println("* 2. Round Trip - 15 % discounts       *");
+			System.out.println("****************************************");
+			System.out.println();
+			
+			System.out.print("Enter Your Trip:");
+			String trip = in.nextLine();
+			System.out.println();
+			
+			if (trip.equals("One way")) {  
+				
+				System.out.println("Please Enter Your Departure Date: ");
+				String departure = in.next();
+				
+			}
+			else {
+				System.out.println("Please Enter Your Departure Date: " );
+				String departure = in.nextLine();
+				System.out.println("Please Enter Your Return Date: " );
+				String returndate = in.nextLine();
+			}
+			System.out.println("How many ny passenger you'd like to bring?");
+			System.out.println();
+			System.out.print("Adult: ");
+			int adult = in.nextInt();
+			System.out.print("Child: ");
+			int child = in.nextInt();
+			System.out.println();
+			
+			
+			//if user select 0, the vip will be null because 0 * 100 = 0
+			System.out.println("Please select your ticket type :");
+			System.out.println("0.Economy       1. VIP ");
+			System.out.print("Selection: ");
+			int ticketType = in.nextInt();
+			
+			if(trip.equals("One way")) {
+				double totalTicketprice1 = ((adultticketprice * adult) + (childticketprice * child) + ticketType * 100);
+				System.out.println();
+				System.out.println("     The Total Payment is: RM " + totalTicketprice1);
+			}
+			else {
+				double totalTicketprice2 = ((adultticketprice * adult) + (childticketprice * child) + (ticketType * 100) * 2);
+				double totalTicketprice3 = totalTicketprice2 * 0.15;	
+				double totalafterdiscount = totalTicketprice2 - totalTicketprice3;	
+				System.out.println();
+				System.out.println("      The Total After Discount is: RM " +totalafterdiscount);
+				System.out.println();
+			
+			
+				
+			}
+			
+			}
+		
+		}
