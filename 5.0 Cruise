@@ -1,6 +1,8 @@
+package AutoVehicles;
+
 import java.util.Scanner;
 
-class Cruise {
+class LinerSpecs {
 	int lengthOfShip;
 	int widthOfShip;
 	int guests;
@@ -72,7 +74,7 @@ class LowEndEmployees {
 public class Project_coding {
 	
 	static Scanner input = new Scanner (System.in);
-	static Cruise ship = new Cruise();
+	static LinerSpecs ship = new LinerSpecs();
 	static int decision;
 	static LifeboatGeneralDetails shipDetails = new LifeboatGeneralDetails();
 	static String temp;
@@ -296,8 +298,6 @@ public class Project_coding {
 			System.out.printf("%.2f", totalRevenueOrLossAfterSailing);
 			System.out.println();
 			System.out.println("Thank you for using our services.");
-			input.close();
-
 	}
 	
 	static int[] arrayEquipment(int lifeboatType) {
