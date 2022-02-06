@@ -1,3 +1,5 @@
+package AutoVehicles;
+
 import java.util.Scanner;
 
 public class Train {
@@ -9,7 +11,6 @@ public class Train {
 		printticketdetail();
 		//printreceipt();
 		
-		in.close ();
 		
 	}
 	
@@ -141,5 +142,4 @@ public class Train {
 			}
 			
 			}
-		
-		}
+}
