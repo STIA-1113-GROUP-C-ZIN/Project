@@ -34,7 +34,7 @@ public class MainMenu {
 				choice();
 			}
 			else if(service==4) {
-				Project_coding d = new Project_coding();
+				Cruise d = new Cruise();
 				d.main(args);
 				System.out.println();
 				choice();
