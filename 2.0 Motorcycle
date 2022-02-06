@@ -1,3 +1,5 @@
+package AutoVehicles;
+
 import java.util.Scanner;
 
 public class Motorcycle {
@@ -10,7 +12,6 @@ public class Motorcycle {
 		printselection();
 		printconfirm();
 
-		in.close();
 	}
 	
 	public static void printbackground() {
@@ -177,4 +178,5 @@ public class Motorcycle {
 			System.out.println("Please exit and re-enter the rental details");
 		}
 	}
+
 }
