@@ -1,3 +1,5 @@
+package AutoVehicles;
+
 import java.util.Scanner;
 
 public class Aircraft {
