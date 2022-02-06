@@ -293,7 +293,7 @@ public class Cruise {
 		 System.out.println();
 		 System.out.print("Please insert how many trips will your ship be doing in one year : ");
 		 int tripsPerOneYear = Integer.parseInt(input.nextLine());
-		 double totalRevenueOrLossAfterSailing = (double) ((((revenue * tripsPerOneYear) * 5) * totalRevenueOrLoss));
+		 double totalRevenueOrLossAfterSailing = (double) ((revenue * tripsPerOneYear) * 5);
 		 System.out.print("The total revenue / loss of your budget after 5 years is : USD ");
 			System.out.printf("%.2f", totalRevenueOrLossAfterSailing);
 			System.out.println();
