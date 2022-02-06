@@ -1,46 +1,67 @@
+package AutoVehicles;
+
 import java.util.Scanner;
 
 public class MainMenu {
 
 	public static void main(String[] args) {
-
-		char options;
 		Scanner sc = new Scanner (System.in);
-		
-		do {
+		char options;
 			System.out.println("Welcome to Group 1 Auto Vehicle");
-			
-			System.out.println("1-Motorcycle 2-Aircraft 3-Cars 4-Cruise 5-Train");
+			System.out.println("1-Motorcycle\t\t2-Aircraft\t\t3-Cars\t\t4-Cruise\t\t5-Train");
 			System.out.println("Please enter the service number:");
-			int service = sc.nextInt();
-			
+			int service = Integer.parseInt(sc.nextLine());
+			while (service != 1 && service != 2 && service != 3 && service != 4 && service != 5) {
+				System.out.println("Invalid input, please re-input your option.");
+				service = Integer.parseInt(sc.nextLine());
+			}
 			if(service==1) {
 				Motorcycle a = new Motorcycle();
 				a.main(args);
+				System.out.println();
+				choice();
 			}
 			else if(service==2) {
 				Aircraft b = new Aircraft();
 				b.main(args);
+				System.out.println();
+				choice();
 			}
 			else if(service==3) {
 				Cars c = new Cars();
 				c.main(args);
+				System.out.println();
+				choice();
 			}
 			else if(service==4) {
-				Cruise d = new Cruise();
+				Project_coding d = new Project_coding();
 				d.main(args);
+				System.out.println();
+				choice();
 			}
 			else if(service==5) {
 				Train e = new Train();
 				e.main(args);
-			}else {
-				System.out.println("Invalid number! Please re-enter with the correct number");
+				System.out.println();
+				choice();
 			}
-		
-			System.out.println("");
-			System.out.println("Return to the main menu? Y=Yes N=No");
-			options=sc.next().charAt(0);
-			}while (options=='y' || options=='Y');
 	}
-
+	
+	static void choice() {
+		Scanner scan = new Scanner(System.in);
+		int choice;
+		System.out.println("Would you like to return to the main menu ?\n1.Yes\t\t2.No");
+		choice = Integer.parseInt(scan.nextLine());
+		while (choice !=1 && choice !=2) {
+			System.out.println("Invalid input, please re-input your option.");
+			choice = Integer.parseInt(scan.nextLine());
+		}
+		if (choice == 1) {
+			main(null);
+		} else
+		if (choice == 2) {
+			System.out.println("Thank you for using our services.");
+			System.exit(0);
+		}
+	}
 }
