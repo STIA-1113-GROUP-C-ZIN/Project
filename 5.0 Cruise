@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Cruise {
+class Cruise {
 	int lengthOfShip;
 	int widthOfShip;
 	int guests;
