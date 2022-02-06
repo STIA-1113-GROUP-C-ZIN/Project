@@ -71,7 +71,7 @@ class LowEndEmployees {
 	String welcomeMessage = "You have chosen, Low End Employees!";
 }
 
-public class Project_coding {
+public class Cruise {
 	
 	static Scanner input = new Scanner (System.in);
 	static LinerSpecs ship = new LinerSpecs();
